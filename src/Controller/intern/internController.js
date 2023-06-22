@@ -1,9 +1,13 @@
-const internModel = require('../models/internModel')
-const collegeModel = require('../models/collegeModel')
+const internModel = require('../../models/internModel')
+const collegeModel = require('../../models/collegeModel')
 const emailValidator = require('email-validator')
-const { isValidString , nameValidation , mobileValidation } = require('../Validator/validator')
+const { isValidString , nameValidation , mobileValidation } = require('../../Validator/validator')
 
-const createIntern = async function(req , res){
+
+
+
+
+const CreateIntern = async function(req , res){
     
     try {
 
@@ -41,6 +45,13 @@ const createIntern = async function(req , res){
 
 }catch(error){
     res.status(500).send({ status: false, message: error.message })
-}}
+}
 
-module.exports = {createIntern}
+}
+
+
+
+
+
+
+module.exports={CreateIntern}
